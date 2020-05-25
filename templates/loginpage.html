@@ -1,0 +1,30 @@
+
+{%block content%}
+
+<form id="forms" method="POST" action="sending" style="margin-top: 300px; margin-left:600px;">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td>Request Type:   </td>
+                    <td>HTML:<input type="radio" name="requestType" value="HTML">
+                    JSON:<input type="radio" name="requestType" value="JSON"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" name="submit">
+                    </td>
+                </tr>
+
+                
+            </table>
+        </form>
+ 
+{% endblock %}
